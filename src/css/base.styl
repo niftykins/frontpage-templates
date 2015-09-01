@@ -1,0 +1,150 @@
+@import "typography"
+@import "variables"
+@import "reset.css"
+
+segment-common()
+	padding quarterDesktopKeylineIncrement * 1px
+	background-color segmentColor
+	box-shadow paperDepth1
+
+body
+	background-color #f7f7f7
+	padding-bottom halfDesktopKeylineIncrement * 1px
+
+a,
+a:hover,
+a:visited,
+a:focus
+	color accentColor
+	text-decoration none
+
+a:hover
+	color accent2Color
+
+.details
+	margin-top desktopKeylineIncrement * 1px
+	text-align center
+
+	.group-avatar
+		border-radius 2px
+
+	.title
+		font-display3()
+		margin-top quarterDesktopKeylineIncrement * 1px
+
+	.description
+		font-headline()
+
+	.nav
+		margin-top quarterDesktopKeylineIncrement * 1px
+
+		li
+			display inline-block
+			font-subhead()
+			padding 0 5px
+			text-transform uppercase
+
+.page-content
+	margin-top desktopKeylineIncrement * 1px
+
+.post
+	segment-common()
+	margin-bottom quarterDesktopKeylineIncrement * 1px
+
+	&:last-child
+		margin-bottom 0
+
+	.title
+		font-headline()
+		margin-bottom quarterDesktopKeylineIncrement * 1px
+
+	.editor-styled-content
+		img
+			width 100%
+
+		p:first-child
+			margin-top 0
+		p:last-child
+			margin-bottom 0
+
+#panel
+	& > section
+		margin-bottom quarterDesktopKeylineIncrement * 1px
+
+		&:last-child
+			margin-bottom 0
+
+#wow-recruitment
+	segment-common()
+
+	.title
+		font-headline()
+		margin-bottom quarterDesktopKeylineIncrement * 1px
+
+	.content > div
+		margin-bottom quarterDesktopKeylineIncrement * 1px
+
+		&:last-child
+			margin-bottom 0
+
+	.icon
+		width 44px
+		float left
+		margin-right quarterDesktopKeylineIncrement * 1px
+
+	.right
+		overflow hidden
+
+	.class
+		float left
+		font-body2()
+
+	.status
+		height 20px
+		text-align right
+		font-caption()
+		text-transform uppercase
+
+		&.high
+			color #F44336
+
+		&.medium
+			color #FFC107
+
+		&.low
+			color #4CAF50
+
+	.role
+		img
+			width 24px
+			margin-right 5px
+
+			&:last-child
+				margin-right 0
+
+#contact
+	segment-common()
+
+	.title
+		font-headline()
+		margin-bottom quarterDesktopKeylineIncrement * 1px
+
+	.content > div
+		height 30px
+		line-height @height - 1
+
+		& > span
+			vertical-align top
+
+	.name
+		font-subhead()
+
+	.info
+		font-caption()
+		margin-left quarterDesktopKeylineIncrement * 1px
+
+	.rank
+		font-body2()
+		float right
+
+@import "responsive"
